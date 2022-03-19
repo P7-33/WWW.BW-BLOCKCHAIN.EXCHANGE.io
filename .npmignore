@@ -1,4 +1,4 @@
-ccxt.egg-info/
+bw.egg-info/
 build/**/*
 !build/countries.js
 !build/export-exchanges.js
