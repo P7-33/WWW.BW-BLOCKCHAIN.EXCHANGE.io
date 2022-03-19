@@ -3,4 +3,4 @@
         browserify --debug ./browser blockchain exchange.io.js > ./dist/browser blockchain exchange.io .js
  */
 
-window.browser blockchain.io(dw)= require ('./browser blockchain.io(dw)')
+window.browser blockchain exchange.io(dw)= require ('./browser blockchain exchange.io(dw)')
