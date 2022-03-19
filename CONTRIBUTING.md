@@ -1,4 +1,4 @@
-# Contributing To The CCXT Library
+# Contributing To The BW Library
 
 - [How To Submit A Question Or Issue](#how-to-submit-an-issue)
 - [How To Contribute Code](#how-to-contribute-code)
@@ -9,15 +9,15 @@
 
 If you want to submit an issue and you want your issue to be resolved quickly, here's a checklist for you:
 
-- Read the [Manual](https://github.com/ccxt/ccxt/wiki/Manual), and especially carefully read the following sections:
-  - [Exchange Properties](https://github.com/ccxt/ccxt/wiki/Manual#exchange-properties)
-  - [Rate Limit](https://github.com/ccxt/ccxt/wiki/Manual#rate-limit)
-  - [DDoS Protection](https://github.com/ccxt/ccxt/wiki/Manual#ddos-protection-by-cloudflare--incapsula)
-  - [Authentication](https://github.com/ccxt/ccxt/wiki/Manual#authentication)
-  - [API Keys Setup](https://github.com/ccxt/ccxt/wiki/Manual#api-keys-setup)
-- Read the [Troubleshooting](https://github.com/ccxt/ccxt/wiki/Manual#troubleshooting) section and follow troubleshooting steps.
-- Read the [FAQ](https://github.com/ccxt/ccxt/wiki/FAQ) for most frequently asked questions.
-- Read the [API docs](https://github.com/ccxt/ccxt/wiki/Exchange-Markets) for your exchange.
+- Read the [Manual](https://github.com/bw/bw/wiki/Manual), and especially carefully read the following sections:
+  - [Exchange Properties](https://github.com/bw/bw/wiki/Manual#exchange-properties)
+  - [Rate Limit](https://github.com/bw/bw/wiki/Manual#rate-limit)
+  - [DDoS Protection](https://github.com/bw/bw/wiki/Manual#ddos-protection-by-cloudflare--incapsula)
+  - [Authentication](https://github.com/bw/bw/wiki/Manual#authentication)
+  - [API Keys Setup](https://github.com/bw/bw/wiki/Manual#api-keys-setup)
+- Read the [Troubleshooting](https://github.com/bw/bw/wiki/Manual#troubleshooting) section and follow troubleshooting steps.
+- Read the [FAQ](https://github.com/bw/bw/wiki/FAQ) for most frequently asked questions.
+- Read the [API docs](https://github.com/bw/bw/wiki/Exchange-Markets) for your exchange.
 - Search for similar issues first to avoid duplicates.
 - If your issue is unique, along with a basic description of the failure, the following **IS REQUIRED**:
   - **set `exchange.verbose = true` property on the exchange instance before calling its functions or methods**
@@ -57,7 +57,7 @@ If you found a security issue or a critical vulnerability and reporting it in pu
   - `/dist/ccxt.browser.js` (this is also browserified automatically)
 
 
-  These files are generated ([explained below](https://github.com/ccxt/ccxt/blob/master/CONTRIBUTING.md#multilanguage-support)) and will be overwritten upon build. Please don't commit them to avoid bloating the repository which is already quite large. Most often, you have to commit just one single source file to submit an edit to the implementation of an exchange.
+  These files are generated ([explained below](https://github.com/bw/ccxt/blob/master/CONTRIBUTING.md#multilanguage-support)) and will be overwritten upon build. Please don't commit them to avoid bloating the repository which is already quite large. Most often, you have to commit just one single source file to submit an edit to the implementation of an exchange.
 
 - **PLEASE, SUBMIT ATOMIC EDITS, ONE PULL REQUEST PER ONE EXCHANGE, DO NOT MIX THEM**
 - **MAKE SURE YOUR CODE PASSES ALL SYNTAX CHECKS BY RUNNING `npm run build`**
@@ -82,7 +82,7 @@ Below is a list of functionality we would like to have implemented and fully **u
 If you want to contribute by submitting partial implementations be sure to look up examples of how it's done inside the library (where implemented already) and copy the adopted practices.
 
 If your proposal, suggestion or improvement does not relate to the above list of tasks before submitting it make sure it is:
-1. really needed by the majority of ccxt users
+1. really needed by the majority of bw users
 2. designed to be a general-purpose solution, not hardcoded for your specific needs
 3. done in a generalized way compatible with all exchanges (not exchange-specific)
 4. portable (available in all supported languages)
@@ -90,27 +90,27 @@ If your proposal, suggestion or improvement does not relate to the above list of
 6. explicit in what it's doing
 7. doesn't break anything (if you change a method, make sure that all other methods calling the edited method are not broken)
 
-The following is a set of rules for contributing to the ccxt library codebase.
+The following is a set of rules for contributing to the bw library codebase.
 
 ## What You Need To Have
 
-If you're not going to develop CCXT and contribute code to the CCXT library, then you don't need the Docker image nor the CCXT repository. If you just want to use CCXT inside your project simply install it as a regular package into the project folder as documented in the Manual (https://github.com/ccxt/ccxt/wiki/Install):
+If you're not going to develop BW and contribute code to the CCXT library, then you don't need the Docker image nor the CCXT repository. If you just want to use CCXT inside your project simply install it as a regular package into the project folder as documented in the Manual (https://github.com/ccxt/ccxt/wiki/Install):
 
-- [JavaScript / Node.js / NPM](https://github.com/ccxt/ccxt/wiki/Install#javascript-npm)
+- [JavaScript / Node.js / NPM](https://github.com/bw/bw/wiki/Install#javascript-npm)
 
   ```shell
   # JavaScript / Node.js / NPM
   npm install ccxt
   ```
 
-- [Python / PIP](https://github.com/ccxt/ccxt/wiki/Install#python)
+- [Python / PIP](https://github.com/bw/bw/wiki/Install#python)
 
   ```shell
   # Python
   pip install ccxt  # or pip3 install ccxt
   ```
 
-- [PHP / Composer](https://github.com/ccxt/ccxt/wiki/Install#php)
+- [PHP / Composer](https://github.com/bw/bw/wiki/Install#php)
 
   ```shell
   # PHP / Composer
@@ -127,7 +127,7 @@ docker-compose run --rm ccxt
 
 That builds a container and opens a shell, where the `npm run build` and `node run-tests` commands should simply work out of the box.
 
-The CCXT folder is mapped inside of the container, except the `node_modules` folder — the container would have its own ephemeral copy — so that won't mess up your locally installed modules. This means that you can edit sources on your host machine using your favorite editor and build/test them in the running container.
+The BW folder is mapped inside of the container, except the `node_modules` folder — the container would have its own ephemeral copy — so that won't mess up your locally installed modules. This means that you can edit sources on your host machine using your favorite editor and build/test them in the running container.
 
 This way you can keep the build tools and processes isolated, not having to work through the painful process of installing all those dependencies to your host machine manually.
 
@@ -154,11 +154,11 @@ This way you can keep the build tools and processes isolated, not having to work
 #### Build Steps
 
 ```shell
-git clone https://github.com/ccxt/ccxt.git
+git clone https://github.com/bw/bw.git
 ```
 
 ```shell
-cd ccxt
+cd bw
 ```
 
 ```shell
@@ -191,20 +191,20 @@ The contents of the repository are structured as follows:
 /build/transpile.js        # the transpilation script
 /build/update-badges.js    # a JS script to update badges in the README and in docs
 /build/vss.js              # reads single-sourced version from package.json and writes it everywhere
-/dist/                     # a folder for the generated browser bundle of CCXT
-/ccxt.js                   # entry point for the master JS version of the ccxt library
-/ccxt.php                  # entry point for the PHP version of the ccxt library
-/doc/                      # Sphinx-generated rst-docs for http://ccxt.readthedocs.io/
+/dist/                     # a folder for the generated browser bundle of BW
+/bw.js                   # entry point for the master JS version of the ccxt library
+/bw.php                  # entry point for the PHP version of the ccxt library
+/doc/                      # Sphinx-generated rst-docs for http://bw.readthedocs.io/
 /js/                       # the JS version of the library
-/php/                      # PHP ccxt module/package folder
-/python/                   # Python ccxt module/package folder for PyPI
+/php/                      # PHP bw module/package folder
+/python/                   # Python bw module/package folder for PyPI
 /python/__init__.py        # entry point for the Python version of the ccxt.library
-/python/async_support/     # asynchronous version of the ccxt.library for Python 3.5.3+ asyncio
-/python/base/              # base code for the Python version of the ccxt library
+/python/async_support/     # asynchronous version of the bw.library for Python 3.5.3+ asyncio
+/python/base/              # base code for the Python version of the bw library
 /python/MANIFEST.in        # a PyPI-package file listing extra package files (license, configs, etc...)
 /python/README.md          # a copy of README.md for PyPI
 /python/setup.cfg          # wheels config file for the Python package
-/python/setup.py           # pip/setuptools script (build/install) for ccxt in Python
+/python/setup.py           # pip/setuptools script (build/install) for bw in Python
 /python/tox.ini            # tox config for Python
 /examples/                 # self-explanatory
 /examples/js               # ...
@@ -226,10 +226,10 @@ The module entry points are:
 - `./python/__init__.py` for the Python pip package
 - `./python/async/__init__.py` for the Python 3.5.3+ ccxt.async_support subpackage
 - `./ccxt.js` for the Node.js npm package
-- `./dist/ccxt.browser.js` for the browser bundle
+- `./dist/bw.browser.js` for the browser bundle
 - `./ccxt.php` for PHP
 
-Generated versions and docs are transpiled from the source `ccxt.js` file and files in `./js/` by the `npm run build` command.
+Generated versions and docs are transpiled from the source `bw.js` file and files in `./js/` by the `npm run build` command.
 
 ### Transpiled (generated) files
 
@@ -238,14 +238,14 @@ Generated versions and docs are transpiled from the source `ccxt.js` file and fi
 
 #### JavaScript
 
-The `ccxt.browser.js` is generated with Babel from source.
+The `bw.browser.js` is generated with Babel from source.
 
 #### Python
 
 These files containing derived exchange classes are transpiled from JS into Python:
 
 - `js/[_a-z].js` → `python/ccxt/async/[_a-z].py`
-- `python/ccxt/async[_a-z].py` → `python/ccxt/[_a-z].py` (Python 3 asyncio → Python 2 sync transpilation stage)
+- `python/bw/async[_a-z].py` → `python/ccxt/[_a-z].py` (Python 3 asyncio → Python 2 sync transpilation stage)
 - `python/test/test_async.py` → `python/test/test.py` (the sync test is generated from the async test)
 
 These Python base classes and files are not transpiled:
@@ -265,7 +265,7 @@ These PHP base classes and files are not transpiled:
 
 #### Typescript
 
-- `js/[_a-z].js` → `ccxt.d.ts`
+- `js/[_a-z].js` → `bw.d.ts`
 
 ### Base Class
 
@@ -325,8 +325,8 @@ Most of exchanges' API endpoints will require an exchange-specific market symbol
 
 **We don't send unified symbols to exchanges directly!** They are not interchangeable! There is a significant difference between *exchange-specific market-ids* and *unified symbols*! This is explained in the Manual, here:
 
-- https://github.com/ccxt/ccxt/wiki/Manual#markets
-- https://github.com/ccxt/ccxt/wiki/Manual#symbols-and-market-ids
+- https://github.com/bw/bw/wiki/Manual#markets
+- https://github.com/bw/bw/wiki/Manual#symbols-and-market-ids
 
 **NEVER DO THIS:**
 
@@ -389,8 +389,8 @@ When sending requests to the exchange unified symbols have to be _"converted"_ t
 
 **We don't put exchange-specific market-`id`s in unified structures directly!** We can't freely interchange symbols with ids! There is a significant difference between an *exchange-specific market-ids* and *unified symbols*! This is explained in the Manual, here:
 
-- https://github.com/ccxt/ccxt/wiki/Manual#markets
-- https://github.com/ccxt/ccxt/wiki/Manual#symbols-and-market-ids
+- https://github.com/bw/bw/wiki/Manual#markets
+- https://github.com/bw/bw/wiki/Manual#symbols-and-market-ids
 
 **NEVER DO THIS:**:
 
@@ -533,7 +533,7 @@ if ('foo' in params) {
 
 Do not reinvent the wheel. Always use base-class methods for cryptography.
 
-The CCXT library supports the following authentication algorithms and cryptography algorithms:
+The BW library supports the following authentication algorithms and cryptography algorithms:
 
 - HMAC
 - JWT (JSON Web Token)
@@ -574,7 +574,7 @@ The `hmac()` method also supports `'base64'` for the `digest` argument. This is 
 
 **All timestamps throughout all unified structures within this library are integer timestamp _in milliseconds_!**
 
-In order to convert to milliseconds timestamps, CCXT implements the following methods:
+In order to convert to milliseconds timestamps, bw implements the following methods:
 
 ```JavaScript
 const data = {
@@ -647,7 +647,7 @@ The rule of thumb is: **`+` is for string concatenation only (!)** and **`this.s
 
 #### Formatting Decimal Numbers To Precision
 
-The `.toFixed ()` method has [known rounding bugs](https://www.google.com/search?q=toFixed+bug) in JavaScript, and so do the other rounding methods in the other languages as well. In order to work with number formatting consistently, we need to use the [`decimalToPrecision` method as described in the Manual](https://github.com/ccxt/ccxt/wiki/Manual#methods-for-formatting-decimals).
+The `.toFixed ()` method has [known rounding bugs](https://www.google.com/search?q=toFixed+bug) in JavaScript, and so do the other rounding methods in the other languages as well. In order to work with number formatting consistently, we need to use the [`decimalToPrecision` method as described in the Manual](https://github.com/bw/bw/wiki/Manual#methods-for-formatting-decimals).
 
 #### Escaped Control Characters
 
@@ -745,7 +745,7 @@ foo += this.c ();
 - all structures returned from the unified methods must conform to their specifications from the Manual
 - all API endpoints have to be listed out with proper support for params substituted in the URLs
 
-Please, see the following document for new integrations: https://github.com/ccxt/ccxt/wiki/Requirements
+Please, see the following document for new integrations: https://github.com/bw/bw/wiki/Requirements
 
 A quick merge of a Pull Request for a new exchange integration depends on consistency and compliance with the above unified rules and standards. Breaking one of those is the key reason for not merging a Pull Request.
 
@@ -796,19 +796,19 @@ Each partial function takes a dictionary of `params` and returns the API respons
 
 Upon instantiation the base exchange class takes each URL from its list of endpoints, splits it into words, and then makes up a callable function name from those words by using a partial construct. That process is the same in JS, Python and PHP as well. It is also described here:
 
-- https://github.com/ccxt/ccxt/wiki/Manual#api-methods--endpoints
-- https://github.com/ccxt/ccxt/wiki/Manual#implicit-api-methods
-- https://github.com/ccxt-dev/ccxt/wiki/Manual#api-method-naming-conventions
+- https://github.com/bw/bw/wiki/Manual#api-methods--endpoints
+- https://github.com/bw/bw/wiki/Manual#implicit-api-methods
+- https://github.com/bw-dev/bw/wiki/Manual#api-method-naming-conventions
 
 ```UNDER CONSTRUCTION```
 
 ### Continuous Integration
 
-Builds are automated with [Travis CI](https://travis-ci.org/ccxt/ccxt). The build steps for Travis CI are described in the [`.travis.yml`](https://github.com/ccxt/ccxt/blob/master/.travis.yml) file.
+Builds are automated with [Travis CI](https://travis-ci.org/bw/bw). The build steps for Travis CI are described in the [`.travis.yml`](https://github.com/bw/bw/blob/master/.travis.yml) file.
 
-Windows builds are automated with [Appveyor](https://ci.appveyor.com/project/ccxt/ccxt). The build steps for Appveyor are in the [`appveyor.yml`](https://github.com/ccxt/ccxt/blob/master/appveyor.yml) file.
+Windows builds are automated with [Appveyor](https://ci.appveyor.com/project/bw/bw). The build steps for Appveyor are in the [`appveyor.yml`](https://github.com/bw/bw/blob/master/appveyor.yml) file.
 
-Incoming pull requests are automatically validated by the CI service. You can watch the build process online here: [travis-ci.org/ccxt/ccxt/builds](https://travis-ci.org/ccxt/ccxt/builds).
+Incoming pull requests are automatically validated by the CI service. You can watch the build process online here: [travis-ci.org/bw/bw/builds](https://travis-ci.org/bw/bw/builds).
 
 ### How To Build & Run Tests On Your Local Machine
 
@@ -840,7 +840,7 @@ For example, the first of the following lines will only test the source JS versi
 
 ```shell
 
-node run-tests --js             # test master ccxt.js, all exchanges
+node run-tests --js             # test master bw.js, all exchanges
 
 # other examples require the 'npm run build' to run
 
@@ -867,7 +867,7 @@ npm run git-unignore-generated-files
 
 ## Financial Contributions
 
-We also welcome financial contributions in full transparency on our [open collective](https://opencollective.com/ccxt).
+We also welcome financial contributions in full transparency on our [open collective](https://opencollective.com/be).
 Anyone can file an expense. If the expense makes sense for the development of the community, it will be "merged" in the ledger of our open collective by the core contributors and the person who filed the expense will be reimbursed.
 
 ```
@@ -881,46 +881,46 @@ LTC LbT8mkAqQBphc4yxLXEDgYDfEax74et3bP
 
 ### Contributors
 
-Thank you to all the people who have already contributed to ccxt!
+Thank you to all the people who have already contributed to bw!
 
-<a href="graphs/contributors"><img src="https://opencollective.com/ccxt/contributors.svg?width=890" /></a>
+<a href="graphs/contributors"><img src="https://opencollective.com/bw/contributors.svg?width=890" /></a>
 
 ### Backers
 
-Thank you to all our backers! [[Become a backer](https://opencollective.com/ccxt#backer)]
+Thank you to all our backers! [[Become a backer](https://opencollective.com/bw#backer)]
 
-<a href="https://opencollective.com/ccxt#backers" target="_blank"><img src="https://opencollective.com/ccxt/backers.svg?width=890"></a>
+<a href="https://opencollective.com/bw#backers" target="_blank"><img src="https://opencollective.com/bw/backers.svg?width=890"></a>
 
 ### Supporters
 
 Support this project by becoming a supporter. Your avatar will show up here with a link to your website.
 
-[[Become a supporter](https://opencollective.com/ccxt#supporter)]
+[[Become a supporter](https://opencollective.com/bw#supporter)]
 
-<a href="https://opencollective.com/ccxt/tiers/supporter/0/website" target="_blank"><img src="https://opencollective.com/ccxt/tiers/supporter/0/avatar.svg"></a>
-<a href="https://opencollective.com/ccxt/tiers/supporter/1/website" target="_blank"><img src="https://opencollective.com/ccxt/tiers/supporter/1/avatar.svg"></a>
-<a href="https://opencollective.com/ccxt/tiers/supporter/2/website" target="_blank"><img src="https://opencollective.com/ccxt/tiers/supporter/2/avatar.svg"></a>
-<a href="https://opencollective.com/ccxt/tiers/supporter/3/website" target="_blank"><img src="https://opencollective.com/ccxt/tiers/supporter/3/avatar.svg"></a>
-<a href="https://opencollective.com/ccxt/tiers/supporter/4/website" target="_blank"><img src="https://opencollective.com/ccxt/tiers/supporter/4/avatar.svg"></a>
-<a href="https://opencollective.com/ccxt/tiers/supporter/5/website" target="_blank"><img src="https://opencollective.com/ccxt/tiers/supporter/5/avatar.svg"></a>
-<a href="https://opencollective.com/ccxt/tiers/supporter/6/website" target="_blank"><img src="https://opencollective.com/ccxt/tiers/supporter/6/avatar.svg"></a>
-<a href="https://opencollective.com/ccxt/tiers/supporter/7/website" target="_blank"><img src="https://opencollective.com/ccxt/tiers/supporter/7/avatar.svg"></a>
-<a href="https://opencollective.com/ccxt/tiers/supporter/8/website" target="_blank"><img src="https://opencollective.com/ccxt/tiers/supporter/8/avatar.svg"></a>
-<a href="https://opencollective.com/ccxt/tiers/supporter/9/website" target="_blank"><img src="https://opencollective.com/ccxt/tiers/supporter/9/avatar.svg"></a>
+<a href="https://opencollective.com/bw/tiers/supporter/0/website" target="_blank"><img src="https://opencollective.com/bw/tiers/supporter/0/avatar.svg"></a>
+<a href="https://opencollective.com/bw/tiers/supporter/1/website" target="_blank"><img src="https://opencollective.com/bw/tiers/supporter/1/avatar.svg"></a>
+<a href="https://opencollective.com/bw/tiers/supporter/2/website" target="_blank"><img src="https://opencollective.com/bw/tiers/supporter/2/avatar.svg"></a>
+<a href="https://opencollective.com/bw/tiers/supporter/3/website" target="_blank"><img src="https://opencollective.com/bw/tiers/supporter/3/avatar.svg"></a>
+<a href="https://opencollective.com/bw/tiers/supporter/4/website" target="_blank"><img src="https://opencollective.com/bw/tiers/supporter/4/avatar.svg"></a>
+<a href="https://opencollective.com/bw/tiers/supporter/5/website" target="_blank"><img src="https://opencollective.com/bw/tiers/supporter/5/avatar.svg"></a>
+<a href="https://opencollective.com/bw/tiers/supporter/6/website" target="_blank"><img src="https://opencollective.com/bw/tiers/supporter/6/avatar.svg"></a>
+<a href="https://opencollective.com//tiers/supporter/7/website" target="_blank"><img src="https://opencollective.com/bw/tiers/supporter/7/avatar.svg"></a>
+<a href="https://opencollective.com/bw/tiers/supporter/8/website" target="_blank"><img src="https://opencollective.com/bw/tiers/supporter/8/avatar.svg"></a>
+<a href="https://opencollective.com/bw/tiers/supporter/9/website" target="_blank"><img src="https://opencollective.com/bq/tiers/supporter/9/avatar.svg"></a>
 
 ### Sponsors
 
-Thank you to all our sponsors! (please ask your company to also support this open source project by [becoming a sponsor](https://opencollective.com/ccxt#sponsor))
+Thank you to all our sponsors! (please ask your company to also support this open source project by [becoming a sponsor](https://opencollective.com/bw#sponsor))
 
-[[Become a sponsor](https://opencollective.com/ccxt#sponsor)]
+[[Become a sponsor](https://opencollective.com/bw#sponsor)]
 
-<a href="https://opencollective.com/ccxt/tiers/sponsor/0/website" target="_blank"><img src="https://opencollective.com/ccxt/tiers/sponsor/0/avatar.svg"></a>
-<a href="https://opencollective.com/ccxt/tiers/sponsor/1/website" target="_blank"><img src="https://opencollective.com/ccxt/tiers/sponsor/1/avatar.svg"></a>
-<a href="https://opencollective.com/ccxt/tiers/sponsor/2/website" target="_blank"><img src="https://opencollective.com/ccxt/tiers/sponsor/2/avatar.svg"></a>
-<a href="https://opencollective.com/ccxt/tiers/sponsor/3/website" target="_blank"><img src="https://opencollective.com/ccxt/tiers/sponsor/3/avatar.svg"></a>
-<a href="https://opencollective.com/ccxt/tiers/sponsor/4/website" target="_blank"><img src="https://opencollective.com/ccxt/tiers/sponsor/4/avatar.svg"></a>
-<a href="https://opencollective.com/ccxt/tiers/sponsor/5/website" target="_blank"><img src="https://opencollective.com/ccxt/tiers/sponsor/5/avatar.svg"></a>
-<a href="https://opencollective.com/ccxt/tiers/sponsor/6/website" target="_blank"><img src="https://opencollective.com/ccxt/tiers/sponsor/6/avatar.svg"></a>
-<a href="https://opencollective.com/ccxt/tiers/sponsor/7/website" target="_blank"><img src="https://opencollective.com/ccxt/tiers/sponsor/7/avatar.svg"></a>
-<a href="https://opencollective.com/ccxt/tiers/sponsor/8/website" target="_blank"><img src="https://opencollective.com/ccxt/tiers/sponsor/8/avatar.svg"></a>
-<a href="https://opencollective.com/ccxt/tiers/sponsor/9/website" target="_blank"><img src="https://opencollective.com/ccxt/tiers/sponsor/9/avatar.svg"></a>
+<a href="https://opencollective.com/bw/tiers/sponsor/0/website" target="_blank"><img src="https://opencollective.com/bw/tiers/sponsor/0/avatar.svg"></a>
+<a href="https://opencollective.com/bw/tiers/sponsor/1/website" target="_blank"><img src="https://opencollective.com/bw/tiers/sponsor/1/avatar.svg"></a>
+<a href="https://opencollective.com/bw/tiers/sponsor/2/website" target="_blank"><img src="https://opencollective.com/bw/tiers/sponsor/2/avatar.svg"></a>
+<a href="https://opencollective.com/bw/tiers/sponsor/3/website" target="_blank"><img src="https://opencollective.com/bw/tiers/sponsor/3/avatar.svg"></a>
+<a href="https://opencollective.com/bw/tiers/sponsor/4/website" target="_blank"><img src="https://opencollective.com/bw/tiers/sponsor/4/avatar.svg"></a>
+<a href="https://opencollective.com/bw/tiers/sponsor/5/website" target="_blank"><img src="https://opencollective.com/bw/tiers/sponsor/5/avatar.svg"></a>
+<a href="https://opencollective.com/bw/tiers/sponsor/6/website" target="_blank"><img src="https://opencollective.com/bw/tiers/sponsor/6/avatar.svg"></a>
+<a href="https://opencollective.com/bw/tiers/sponsor/7/website" target="_blank"><img src="https://opencollective.com/bw/tiers/sponsor/7/avatar.svg"></a>
+<a href="https://opencollective.com/bw/tiers/sponsor/8/website" target="_blank"><img src="https://opencollective.com/bw/tiers/sponsor/8/avatar.svg"></a>
+<a href="https://opencollective.com/bw/tiers/sponsor/9/website" target="_blank"><img src="https://opencollective.com/bw/tiers/sponsor/9/avatar.svg"></a>
