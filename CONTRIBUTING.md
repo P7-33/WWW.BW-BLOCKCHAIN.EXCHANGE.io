@@ -1,22 +1,8 @@
 # Contributing To The BW Library
 
-- [How To Submit A Question Or Issue](#how-to-submit-an-issue)
-- [How To Contribute Code](#how-to-contribute-code)
-  - [What You Need To Have](#what-you-need-to-have)
-  - [What You Need To Know](#what-you-need-to-know)
-
 ## How To Submit An Issue
 
 If you want to submit an issue and you want your issue to be resolved quickly, here's a checklist for you:
-
-- Read the [Manual](https://github.com/bw/bw/wiki/Manual), and especially carefully read the following sections:
-  - [Exchange Properties](https://github.com/bw/bw/wiki/Manual#exchange-properties)
-  - [Rate Limit](https://github.com/bw/bw/wiki/Manual#rate-limit)
-  - [DDoS Protection](https://github.com/bw/bw/wiki/Manual
-  - [Authentication](https://github.com/bw/bw/wiki/Manual#authentication)
-  - [API Keys Setup](https://github.com/bw/bw/wiki/Manual#api-keys-setup)
-- Read the [Troubleshooting](https://github.com/bw/bw/wiki/Manual#troubleshooting) section and follow troubleshooting steps.
-- Read the [FAQ](https://github.com/bw/bw/wiki/FAQ) for most frequently asked questions.
 - Read the [API docs](https://github.com/bw/bw/wiki/Exchange-Markets) for your exchange.
 - Search for similar issues first to avoid duplicates.
 - If your issue is unique, along with a basic description of the failure, the following **IS REQUIRED**:
@@ -29,13 +15,13 @@ If you want to submit an issue and you want your issue to be resolved quickly, h
   - paste the **full verbose output** of the failing method without your keys
   - the verbose output should include the request and response from the exchange (not just an error callstack)
   - write your language **and version**
-  - write ccxt library version
+  - write bw library version
   - which exchange it is
   - which method you're trying to call
 
 ### Reporting Vulnerabilities And Critical Issues
 
-If you found a security issue or a critical vulnerability and reporting it in public would impose risk – please feel free to send us a message to <a href="mailto:info@ccxt.trade">info@ccxt.trade</a>.
+If you found a security issue or a critical vulnerability and reporting it in public would impose risk – please feel free to send us a message to <a href="mailto:info@bw.trade">info@bw.trade</a>.
 
 ## How To Contribute Code
 
@@ -49,7 +35,7 @@ If you found a security issue or a critical vulnerability and reporting it in pu
   - `/build/*` (these are generated automatically)
   - `/php/*` (except for base classes)
   - `/python/*` (except for base classes)
-  - `/ccxt.js`
+  - `/bw.js`
   - `/README.md` (exchange lists are generated automatically)
   - `/package.json`
   - `/package.lock`
@@ -107,7 +93,7 @@ If you're not going to develop BW and contribute code to the BW library, then yo
 
   ```shell
   # Python
-  pip install ccxt  # or pip3 install bw
+  pip install BW  # or pip3 install bw
   ```
 
 - [PHP / Composer](https://github.com/bw/bw/wiki/Install#php)
@@ -153,9 +139,6 @@ This way you can keep the build tools and processes isolated, not having to work
 
 #### Build Steps
 
-```shell
-git clone https://github.com/bw/bw.git
-```
 
 ```shell
 cd bw
@@ -192,13 +175,13 @@ The contents of the repository are structured as follows:
 /build/update-badges.js    # a JS script to update badges in the README and in docs
 /build/vss.js              # reads single-sourced version from package.json and writes it everywhere
 /dist/                     # a folder for the generated browser bundle of BW
-/bw.js                   # entry point for the master JS version of the ccxt library
-/bw.php                  # entry point for the PHP version of the ccxt library
+/bw.js                   # entry point for the master JS version of the bw library
+/bw.php                  # entry point for the PHP version of the bw library
 /doc/                      # Sphinx-generated rst-docs for http://bw.readthedocs.io/
 /js/                       # the JS version of the library
 /php/                      # PHP bw module/package folder
 /python/                   # Python bw module/package folder for PyPI
-/python/__init__.py        # entry point for the Python version of the ccxt.library
+/python/__init__.py        # entry point for the Python version of the bw.library
 /python/async_support/     # asynchronous version of the bw.library for Python 3.5.3+ asyncio
 /python/base/              # base code for the Python version of the bw library
 /python/MANIFEST.in        # a PyPI-package file listing extra package files (license, configs, etc...)
