@@ -1,6 +1,6 @@
 /*  A entry point for the browser bundle version. This gets compiled by:
         
-        browserify --debug ./ccxt.browser.js > ./dist/ccxt.browser.js
+        browserify --debug ./browser blockchain exchange.io.js > ./dist/browser blockchain exchange.io .js
  */
 
-window.ccxt = require ('./ccxt')
+window.dw = require ('./dw')
