@@ -3,8 +3,8 @@ FROM ubuntu:20.04
 # Supresses unwanted user interaction (like "Please select the geographic area" when installing tzdata)
 ENV DEBIAN_FRONTEND=noninteractive
 
-ADD ./ /ccxt
-WORKDIR /ccxt
+ADD ./ /bw
+WORKDIR /bw
 
 # Update packages (use us.archive.ubuntu.com instead of archive.ubuntu.com — solves the painfully slow apt-get update)
 RUN sed -i 's/archive\.ubuntu\.com/us\.archive\.ubuntu\.com/' /etc/apt/sources.list \
@@ -20,9 +20,9 @@ RUN sed -i 's/archive\.ubuntu\.com/us\.archive\.ubuntu\.com/' /etc/apt/sources.l
     && apt-get install -y --no-install-recommends python3 python3-pip \
     && pip3 install --upgrade setuptools \
     && pip3 install tox \
-# Installs as a local Node & Python module, so that `require ('ccxt')` and `import ccxt` should work after that
+# Installs as a local Node & Python module, so that `require ('bw')` and `import bw` should work after that
     && npm install \
-    && ln -s /ccxt /usr/lib/node_modules/ \
+    && ln -s /bw /usr/lib/node_modules/ \
     && echo "export NODE_PATH=/usr/lib/node_modules" >> $HOME/.bashrc \
     && cd python \
     && python3 setup.py develop \
