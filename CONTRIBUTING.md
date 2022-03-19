@@ -12,7 +12,7 @@ If you want to submit an issue and you want your issue to be resolved quickly, h
 - Read the [Manual](https://github.com/bw/bw/wiki/Manual), and especially carefully read the following sections:
   - [Exchange Properties](https://github.com/bw/bw/wiki/Manual#exchange-properties)
   - [Rate Limit](https://github.com/bw/bw/wiki/Manual#rate-limit)
-  - [DDoS Protection](https://github.com/bw/bw/wiki/Manual#ddos-protection-by-cloudflare--incapsula)
+  - [DDoS Protection](https://github.com/bw/bw/wiki/Manual
   - [Authentication](https://github.com/bw/bw/wiki/Manual#authentication)
   - [API Keys Setup](https://github.com/bw/bw/wiki/Manual#api-keys-setup)
 - Read the [Troubleshooting](https://github.com/bw/bw/wiki/Manual#troubleshooting) section and follow troubleshooting steps.
@@ -39,7 +39,7 @@ If you found a security issue or a critical vulnerability and reporting it in pu
 
 ## How To Contribute Code
 
-- **[MAKE SURE YOUR CODE IS UNIFIED](https://github.com/ccxt/ccxt/blob/master/CONTRIBUTING.md#derived-exchange-classes)!**
+- **[MAKE SURE YOUR CODE IS UNIFIED](https://github.com/bw/bw/blob/master/CONTRIBUTING.md#derived-exchange-classes)!**
 
   ↑ This is the most important rule of all.
 
@@ -54,10 +54,10 @@ If you found a security issue or a critical vulnerability and reporting it in pu
   - `/package.json`
   - `/package.lock`
   - `/wiki/*` (except for real edits, exchange lists are generated automatically)
-  - `/dist/ccxt.browser.js` (this is also browserified automatically)
+  - `/dist/bw.browser.js` (this is also browserified automatically)
 
 
-  These files are generated ([explained below](https://github.com/bw/ccxt/blob/master/CONTRIBUTING.md#multilanguage-support)) and will be overwritten upon build. Please don't commit them to avoid bloating the repository which is already quite large. Most often, you have to commit just one single source file to submit an edit to the implementation of an exchange.
+  These files are generated ([explained below](https://github.com/bw/bw/blob/master/CONTRIBUTING.md#multilanguage-support)) and will be overwritten upon build. Please don't commit them to avoid bloating the repository which is already quite large. Most often, you have to commit just one single source file to submit an edit to the implementation of an exchange.
 
 - **PLEASE, SUBMIT ATOMIC EDITS, ONE PULL REQUEST PER ONE EXCHANGE, DO NOT MIX THEM**
 - **MAKE SURE YOUR CODE PASSES ALL SYNTAX CHECKS BY RUNNING `npm run build`**
@@ -94,27 +94,27 @@ The following is a set of rules for contributing to the bw library codebase.
 
 ## What You Need To Have
 
-If you're not going to develop BW and contribute code to the CCXT library, then you don't need the Docker image nor the CCXT repository. If you just want to use CCXT inside your project simply install it as a regular package into the project folder as documented in the Manual (https://github.com/ccxt/ccxt/wiki/Install):
+If you're not going to develop BW and contribute code to the BW library, then you don't need the Docker image nor the BW repository. If you just want to use BW inside your project simply install it as a regular package into the project folder as documented in the Manual (https://github.com/bw/bw/wiki/Install):
 
 - [JavaScript / Node.js / NPM](https://github.com/bw/bw/wiki/Install#javascript-npm)
 
   ```shell
   # JavaScript / Node.js / NPM
-  npm install ccxt
+  npm install bw
   ```
 
 - [Python / PIP](https://github.com/bw/bw/wiki/Install#python)
 
   ```shell
   # Python
-  pip install ccxt  # or pip3 install ccxt
+  pip install ccxt  # or pip3 install bw
   ```
 
 - [PHP / Composer](https://github.com/bw/bw/wiki/Install#php)
 
   ```shell
   # PHP / Composer
-  composer install ccxt
+  composer install bw
   ```
 
 ### With Docker
@@ -122,7 +122,7 @@ If you're not going to develop BW and contribute code to the CCXT library, then 
 The easiest way is to use Docker to run an isolated build & test enviroment with all the dependencies installed:
 
 ```shell
-docker-compose run --rm ccxt
+docker-compose run --rm bw
 ```
 
 That builds a container and opens a shell, where the `npm run build` and `node run-tests` commands should simply work out of the box.
@@ -218,16 +218,16 @@ The contents of the repository are structured as follows:
 
 ### Multilanguage Support
 
-The ccxt library is available in three different languages (more to come). We encourage developers to design *portable* code, so that a single-language user could read the code in other languages and understand it easily. This helps the adoption of the library. The main goal is to provide a generalized, unified, consistent and robust interface to as many existing cryptocurrency exchanges as possible.
+The bw library is available in three different languages (more to come). We encourage developers to design *portable* code, so that a single-language user could read the code in other languages and understand it easily. This helps the adoption of the library. The main goal is to provide a generalized, unified, consistent and robust interface to as many existing cryptocurrency exchanges as possible.
 
 At first, all language-specific versions were developed in parallel, but separately from each other. But when it became too hard to maintain and keep the code consistent among all supported languages we have decided to switch to what we call a *source/generated* process. There is now a single source version in one language, that is JavaScript. Other language-specific versions are syntactically derived (transpiled, generated) automatically from the source version. But it doesn't mean that you have to be a JS coder to contribute. The portability principle allows Python and PHP devs to effectively participate in developing the source version as well.
 
 The module entry points are:
 - `./python/__init__.py` for the Python pip package
-- `./python/async/__init__.py` for the Python 3.5.3+ ccxt.async_support subpackage
-- `./ccxt.js` for the Node.js npm package
+- `./python/async/__init__.py` for the Python 3.5.3+ bw.async_support subpackage
+- `./bw.js` for the Node.js npm package
 - `./dist/bw.browser.js` for the browser bundle
-- `./ccxt.php` for PHP
+- `./bw.php` for PHP
 
 Generated versions and docs are transpiled from the source `bw.js` file and files in `./js/` by the `npm run build` command.
 
@@ -244,14 +244,14 @@ The `bw.browser.js` is generated with Babel from source.
 
 These files containing derived exchange classes are transpiled from JS into Python:
 
-- `js/[_a-z].js` → `python/ccxt/async/[_a-z].py`
-- `python/bw/async[_a-z].py` → `python/ccxt/[_a-z].py` (Python 3 asyncio → Python 2 sync transpilation stage)
+- `js/[_a-z].js` → `python/bw/async/[_a-z].py`
+- `python/bw/async[_a-z].py` → `python/bw/[_a-z].py` (Python 3 asyncio → Python 2 sync transpilation stage)
 - `python/test/test_async.py` → `python/test/test.py` (the sync test is generated from the async test)
 
 These Python base classes and files are not transpiled:
 
-- `python/ccxt/base/*`
-- `python/ccxt/async/base/*`
+- `python/bw/base/*`
+- `python/bw/async/base/*`
 
 #### PHP
 
@@ -325,7 +325,7 @@ Most of exchanges' API endpoints will require an exchange-specific market symbol
 
 **We don't send unified symbols to exchanges directly!** They are not interchangeable! There is a significant difference between *exchange-specific market-ids* and *unified symbols*! This is explained in the Manual, here:
 
-- https://github.com/bw/bw/wiki/Manual#markets
+- https://github.com/bw/bw/wiki/Manual#markets/#odds cloudflare]
 - https://github.com/bw/bw/wiki/Manual#symbols-and-market-ids
 
 **NEVER DO THIS:**
@@ -352,9 +352,9 @@ async fetchTicker (symbol, params = {}) {
 }
 ```
 
-Instead of sending a unified CCXT symbol to the exchange, we **always** take the exchange-specific market-`id` that corresponds to that symbol. If it so happens that an exchange specific market-id is exactly the same as the CCXT unified symbol – that's a happy coincidence, but we never rely on that in the unified CCXT API.
+Instead of sending a unified BW symbol to the exchange, we **always** take the exchange-specific market-`id` that corresponds to that symbol. If it so happens that an exchange specific market-id is exactly the same as the BW unified symbol – that's a happy coincidence, but we never rely on that in the unified BW API.
 
-To get the exchange-specific market-id by a unified CCXT symbol, use the following methods:
+To get the exchange-specific market-id by a unified BW symbol, use the following methods:
 
 - `this.market (symbol)` – returns the entire unified market structure, containing the `id`, `baseId`, `quoteId`, and many other interesting things
 - `this.marketId (symbol)` – returns just the exchange-specific `id` of a market by a unified symbol (if you don't need anything else)
@@ -385,7 +385,7 @@ async fetchTicker (symbol, params = {}) {
 
 #### Parsing Symbols
 
-When sending requests to the exchange unified symbols have to be _"converted"_ to exchange-specific market-`id`s like shown above. The same is true on the other side – when receiving an exchange response it has an exchange-specific market-`id` inside it that has to be _"converted back"_ to a unified CCXT symbol.
+When sending requests to the exchange unified symbols have to be _"converted"_ to exchange-specific market-`id`s like shown above. The same is true on the other side – when receiving an exchange response it has an exchange-specific market-`id` inside it that has to be _"converted back"_ to a unified BW symbol.
 
 **We don't put exchange-specific market-`id`s in unified structures directly!** We can't freely interchange symbols with ids! There is a significant difference between an *exchange-specific market-ids* and *unified symbols*! This is explained in the Manual, here:
 
@@ -836,7 +836,7 @@ You can restrict tests to a specific language, a particular exchange or symbol:
 node run-tests [--php] [--js] [--python] [--python3] [exchange] [symbol]
 ```
 
-For example, the first of the following lines will only test the source JS version of the library (`ccxt.js`). It does not require an `npm run build` before running it (can be useful if you need to verify quickly whether your changes break the code or not):
+For example, the first of the following lines will only test the source JS version of the library (`bw.js`). It does not require an `npm run build` before running it (can be useful if you need to verify quickly whether your changes break the code or not):
 
 ```shell
 
@@ -882,8 +882,6 @@ LTC LbT8mkAqQBphc4yxLXEDgYDfEax74et3bP
 ### Contributors
 
 Thank you to all the people who have already contributed to bw!
-
-<a href="graphs/contributors"><img src="https://opencollective.com/bw/contributors.svg?width=890" /></a>
 
 ### Backers
 
