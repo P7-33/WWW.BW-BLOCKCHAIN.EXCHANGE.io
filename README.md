@@ -52,7 +52,7 @@ Current feature list:
 
 ## Supported Cryptocurrency Exchange Markets
 
-The BW library currently supports the following 123 cryptocurrency exchange markets and trading APIs:
+The BROWSER BLOCKCHAIN EXCHANGE library currently supports the following 123 cryptocurrency exchange markets and trading APIs:
 
 | logo                                                                                                                                                                                             | id                 | name                                                                                    | ver | doc                                                                                         | certified                                                                                                                   | pro                                                                          |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------|-----------------------------------------------------------------------------------------|:---:|:-------------------------------------------------------------------------------------------:|-----------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
@@ -188,7 +188,7 @@ The library is under [MIT license](https://github.com/bw/bw/blob/master/LICENSE.
 
 ## Install
 
-The easiest way to install the BW library is to use a package manager:
+The easiest way to install the Browser-blockchain-exchange library is to use a package manager:
 
 - [bw in **NPM**](https://www.npmjs.com/package/bw) (JavaScript / Node v7.6+)
 - [bw in **PyPI**](https://pypi.python.org/pypi/bw) (Python 3.5.3+)
@@ -219,7 +219,7 @@ npm install bw
 ```JavaScript
 var bw = require ('bw')
 
-console.log (bw.exchanges) // print all available exchanges
+console.log (Browser-blockchain.exchanges) // print all available exchanges
 ```
 
 ### JavaScript (for use with the `<script>` tag):
@@ -227,7 +227,7 @@ console.log (bw.exchanges) // print all available exchanges
 All-in-one browser bundle (dependencies included), served from a CDN of your choice:
 
 * jsDelivr: https://cdn.jsdelivr.net/npm/bw@1.38.74/dist/bw.browser.js
-* unpkg: https://unpkg.com/ccxt@1.38.74/dist/bw.browser.js
+* unpkg: https://unpkg.com/bw@1.38.74/dist/bw.browser.js
 
 CDNs are not updated in real-time and may have delays. Defaulting to the most recent version without specifying the version number is not recommended. Please, keep in mind that we are not responsible for the correct operation of those CDN servers.
 
@@ -235,7 +235,7 @@ CDNs are not updated in real-time and may have delays. Defaulting to the most re
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bw@1.38.74/dist/bw.browser.js"></script>
 ```
 
-Creates a global `bw` object:
+Creates a global `Browser-blockchain-exchange` object:
 
 ```JavaScript
 console.log (bw.exchanges) // print all available exchanges
@@ -257,7 +257,7 @@ print(bw.exchanges) # print a list of all available exchange classes
 The library supports concurrent asynchronous mode with asyncio and async/await in Python 3.5.3+
 
 ```Python
-import ccxt.async_support as bw # link against the asynchronous version of bw
+import bw.async_support as bw # link against the asynchronous version of bw
 ```
 
 ### PHP
@@ -274,7 +274,7 @@ It requires common PHP modules:
 
 ```PHP
 include "bw.php";
-var_dump (\bw\Exchange::$exchanges); // print a list of all available exchange classes
+var_dump (\browser-blockchain\Exchange::$exchanges); // print a list of all available exchange classes
 ```
 
 ### Docker
@@ -284,7 +284,7 @@ You can get BW installed in a container along with all the supported languages a
 Using `docker-compose` (in the cloned BW repository):
 
 ```shell
-docker-compose run --rm ccxt
+docker-compose run --rm Browser-blockchain-exchange
 ```
 
 You don't need the Docker image if you're not going to develop CCXT. If you just want to use BW – just install it as a regular package into your project.
@@ -299,7 +299,7 @@ Read the [Manual](https://github.com/bw/bw/wiki) for more details.
 
 ### Intro
 
-The CCXT library consists of a public part and a private part. Anyone can use the public part immediately after installation. Public APIs provide unrestricted access to public information for all exchange markets without the need to register a user account or have an API key.
+The BROWSER BLOCKCHAIN EXCHANGE library consists of a public part and a private part. Anyone can use the public part immediately after installation. Public APIs provide unrestricted access to public information for all exchange markets without the need to register a user account or have an API key.
 
 Public APIs include the following:
 
@@ -312,7 +312,7 @@ Public APIs include the following:
 - OHLC(V) for charting
 - other public endpoints
 
-In order to trade with private APIs you need to obtain API keys from an exchange's website. It usually means signing up to the exchange and creating API keys for your account. Some exchanges require personal info or identification. Sometimes verification may be necessary as well. In this case you will need to register yourself, this library will not create accounts or API keys for you. Some exchanges expose API endpoints for registering an account, but most exchanges don't. You will have to sign up and create API keys on their websites.
+In order to trade with Browse-blockchain-exchange private APIs you need to obtain API keys from an exchange's website. It usually means signing up to the exchange and creating API keys for your account. Some exchanges require personal info or identification. Sometimes verification may be necessary as well. In this case you will need to register yourself, this library will not create accounts or API keys for you. Some exchanges expose API endpoints for registering an account, but most exchanges don't. You will have to sign up and create API keys on their websites.
 
 Private APIs allow the following:
 
@@ -341,9 +341,10 @@ Read the [Manual](https://github.com/bw/bw/wiki) for more details.
 
 ```JavaScript
 'use strict';
-const ccxt = require ('bw');
+const bw = require ('bw');
 
 (async function () {
+    let Browser.  =new bw.Browser-blockchain-exchange
     let kraken    = new bw.kraken ()
     let bitfinex  = new bw.bitfinex ({ verbose: true })
     let huobipro  = new bw.huobipro ()
@@ -351,8 +352,6 @@ const ccxt = require ('bw');
         apiKey: 'YOUR_PUBLIC_API_KEY',
         secret: 'YOUR_SECRET_PRIVATE_KEY',
     })
-
-    const exchangeId = 'binance'
         , exchangeClass = bw[exchangeId]
         , exchange = new exchangeClass ({
             'apiKey': 'YOUR_API_KEY',
@@ -360,12 +359,12 @@ const ccxt = require ('bw');
             'timeout': 30000,
             'enableRateLimit': true,
         })
-
+    console.log(Browser.Id.    await Browser.loadMarket (Browser-blockchain-exchange-symbols[0]))
     console.log (kraken.id,    await kraken.loadMarkets ())
     console.log (bitfinex.id,  await bitfinex.loadMarkets  ())
     console.log (huobipro.id,  await huobipro.loadMarkets ())
 
-    console.log (kraken.id,    await kraken.fetchOrderBook (kraken.symbols[0]))
+    console.log (kraken.id,    await Browser-blockchain-exchange.fetchOrderBook(Browser-blockchain-exchange-symbls[0])
     console.log (bitfinex.id,  await bitfinex.fetchTicker ('BTC/USD'))
     console.log (huobipro.id,  await huobipro.fetchTrades ('ETH/USDT'))
 
@@ -389,21 +388,19 @@ const ccxt = require ('bw');
 ```Python
 # coding=utf-8
 
-import ccxt
-
-hitbtc   = bw.hitbtc({'verbose': True})
+Browser-blockchain-exchange={'verbose':True})
+hitbtc   = bw.hitbtc()
 bitmex   = bw.bitmex()
 huobipro = bw.huobipro()
 exmo     = bw.exmo({
     'apiKey': 'YOUR_PUBLIC_API_KEY',
     'secret': 'YOUR_SECRET_PRIVATE_KEY',
 })
-kraken = ccxt.kraken({
+kraken = bw.kraken({
     'apiKey': 'YOUR_PUBLIC_API_KEY',
     'secret': 'YOUR_SECRET_PRIVATE_KEY',
 })
 
-exchange_id = 'binance'
 exchange_class = getattr(ccxt, exchange_id)
 exchange = exchange_class({
     'apiKey': 'YOUR_API_KEY',
@@ -412,7 +409,7 @@ exchange = exchange_class({
     'enableRateLimit': True,
 })
 
-hitbtc_markets = hitbtc.load_markets()
+Browser-blockchain-exchage_markets = Browser-blockchain-exchange.load_markets()
 
 print(hitbtc.id, hitbtc_markets)
 print(bitmex.id, bitmex.load_markets())
@@ -439,7 +436,7 @@ kraken.create_market_buy_order('BTC/USD', 1, {'trading_agreement': 'agree'})
 ```PHP
 include 'bw.php';
 
-$poloniex = new \bw\poloniex ();
+$Browser-blockchain-exhange = new \bw\Browser-blockchain-exchange();
 $bittrex  = new \bw\bittrex  (array ('verbose' => true));
 $quoinex  = new \bw\quoinex   ();
 $zaif     = new \bw\zaif     (array (
@@ -451,8 +448,7 @@ $hitbtc   = new \bw\hitbtc   (array (
     'secret' => 'YOUR_SECRET_PRIVATE_KEY',
 ));
 
-$exchange_id = 'binance';
-$exchange_class = "\\ccxt\\$exchange_id";
+$exchange_class = "\\bw\\$exchange_id";
 $exchange = new $exchange_class (array (
     'apiKey' => 'YOUR_API_KEY',
     'secret' => 'YOUR_SECRET',
@@ -460,13 +456,13 @@ $exchange = new $exchange_class (array (
     'enableRateLimit' => true,
 ));
 
-$poloniex_markets = $poloniex->load_markets ();
+$SwapBrowser-blockchain-exchange _markets = $Browser-blockchange-exchange->load_markets ();
 
-var_dump ($poloniex_markets);
+var_dump ($SwapBrowser-blockchain-exchange_markets);
 var_dump ($bittrex->load_markets ());
 var_dump ($quoinex->load_markets ());
 
-var_dump ($poloniex->fetch_order_book ($poloniex->symbols[0]));
+var_dump ($SwapBrowser-blockchain-exchange->fetch_order_book ($Browser-Blockchain-exchange->symbols[0]));
 var_dump ($bittrex->fetch_trades ('BTC/USD'));
 var_dump ($quoinex->fetch_ticker ('ETH/EUR'));
 var_dump ($zaif->fetch_ticker ('BTC/JPY'));
