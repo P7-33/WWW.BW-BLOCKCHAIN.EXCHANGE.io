@@ -287,7 +287,7 @@ Using `docker-compose` (in the cloned BW repository):
 docker-compose run --rm Browser-blockchain-exchange
 ```
 
-You don't need the Docker image if you're not going to develop CCXT. If you just want to use BW – just install it as a regular package into your project.
+You don't need the Docker image if you're not going to develop BW. If you just want to use BW – just install it as a regular package into your project.
 
 ---
 
@@ -401,7 +401,7 @@ kraken = bw.kraken({
     'secret': 'YOUR_SECRET_PRIVATE_KEY',
 })
 
-exchange_class = getattr(ccxt, exchange_id)
+exchange_class = getattr(bw, exchange_id)
 exchange = exchange_class({
     'apiKey': 'YOUR_API_KEY',
     'secret': 'YOUR_SECRET',
