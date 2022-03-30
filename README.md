@@ -250,7 +250,8 @@ pip install ccxt
 ```
 
 ```Python
-import bw
+import ccxx
+
 print(bw.exchanges) # print a list of all available exchange classes
 ```
 
@@ -293,7 +294,7 @@ You don't need the Docker image if you're not going to develop BW. If you just w
 
 ## Documentation
 
-Read the [Manual](https://github.com/bw/bw/wiki) for more details.
+Read the [Manual](https://github.com/cxx/cxx/wiki) for more details.
 
 ## Usage
 
@@ -325,7 +326,7 @@ Private APIs allow the following:
 - transfer funds between accounts
 - use merchant services
 
-This library implements full public and private REST APIs for all exchanges. WebSocket and FIX implementations in JavaScript, PHP, Python are available in [BW Pro](https://bw.pro), which is a professional addon to BW with support for WebSocket streams.
+This library implements full public and private REST APIs for all exchanges. WebSocket and FIX implementations in JavaScript, PHP, Python are available in [ Pro](https://bw.pro), which is a professional addon to BW with support for WebSocket streams.
 
 The BW library supports both camelcase notation (preferred in JavaScript) and underscore notation (preferred in Python and PHP), therefore all methods can be called in either notation or coding style in any language.
 
@@ -335,7 +336,7 @@ exchange.methodName ()  // camelcase pseudocode
 exchange.method_name () // underscore pseudocode
 ```
 
-Read the [Manual](https://github.com/bw/bw/wiki) for more details.
+Read the [Manual](https://github.com/ccxx/ccxx/wiki) for more details.
 
 ### JavaScript
 
@@ -481,7 +482,7 @@ $hitbtc->create_order ('BTC/USD', 'limit', 'buy', 1, 3000, array ('clientOrderId
 
 ## Contributing
 
-Please read the [CONTRIBUTING](https://github.com/bw/bw/blob/master/CONTRIBUTING.md) document before making changes that you would like adopted in the code. Also, read the [Manual](https://github.com/bw/bw/wiki) for more details.
+Please read the [CONTRIBUTING](https://github.com/ccxx/ccxx/blob/master/CONTRIBUTING.md) document before making changes that you would like adopted in the code. Also, read the [Manual](https://github.com/ccxx/ccxx/wiki) for more details.
 
 ## Support Developer Team
 
