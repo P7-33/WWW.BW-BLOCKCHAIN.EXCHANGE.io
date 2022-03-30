@@ -443,7 +443,7 @@ $zaif     = new \bw\zaif     (array (
     'apiKey' => 'YOUR_PUBLIC_API_KEY',
     'secret' => 'YOUR_SECRET_PRIVATE_KEY',
 ));
-$hitbtc   = new \bw\hitbtc   (array (
+$Browser-blockchange-exchange  = new \bw\Browse-blockchain-exchange   (array (
     'apiKey' => 'YOUR_PUBLIC_API_KEY',
     'secret' => 'YOUR_SECRET_PRIVATE_KEY',
 ));
@@ -530,10 +530,12 @@ Thank you to all our backers! [[Become a backer](https://opencollective.com/bw#b
 ### Crypto
 
 ```
-ETH 0x15ABC36db169Ca06670791B143A19bEc7Ba4e83f (ETH only)
-BTC bc1qpm7dndnx0ckhkcpfasxr0a3hqe5x5l290sx3tr
-BCH qpu9h5usuhlx00222upgfysgdddf8u702y4zpw78za
-LTC ltc1qhwqjtnyt39v72cgy5fwj5a6t2n5csgyk9dal0p
+ETH 0xc7d0b7C45b5eDe5704D46C69Dff7813A55671b5a (ETH only)
+BTC bc1qtxdpunal5syt0kfqcf0adsxcqep6an0sh47224
+BNB bnb1rdcr3v4clk56qhsmtwnc7wns45z7gg9ytv2tcq
+TRX TB6WdjhNbCdKp8zs7biwwEZeQVnxELn9Vh
+
+
 ```
 
 Thank you!
@@ -544,6 +546,6 @@ Thank you!
 - [Read our blog on Medium](https://medium.com/@swapbrowser)
 - <sub><sub>[![Discord](https://img.shields.io/discord/690203284119617602?logo=discord&logoColor=white)](https://discord.gg/dhzSKYU)</sub></sub>
 
-## Contact Us
 
+https://github.com/P7-33/WWW.BROWSER-BLOCKCHAIN.EXCHANGE.io
 
