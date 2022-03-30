@@ -246,7 +246,7 @@ console.log (bw.exchanges) // print all available exchanges
 [bw in **PyPI**](https://pypi.python.org/pypi/bw)
 
 ```shell
-pip install ccxt
+pip install Browser blockchain exchange
 ```
 
 ```Python
