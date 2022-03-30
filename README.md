@@ -3,8 +3,8 @@
 – CryptoCurrency eXchange Trading Library
 E
 [![Build Status](https://travis-ci.com/bw/bw.svg?branch=master)](https://travis-ci.com/bw/bw) [![npm](https://img.shields.io/npm/v/bw.svg)](https://npmjs.com/package/bw) [![PyPI](https://img.shields.io/pypi/v/bw.svg)](https://pypi.python.org/pypi/bw) [![NPM Downloads](https://img.shields.io/npm/dm/bw.svg)](https://www.npmjs.com/package/bw) [![Discord](https://img.shields.io/discord/690203284119617602?logo=discord&logoColor=white)](https://discord.gg/dhzSKYU) [![Supported Exchanges](https://img.shields.io/badge/exchanges-123-blue.svg)](https://github.com/bw/bw/wiki/Exchange-Markets) [![Open Collective](https://opencollective.com/bw/backers/badge.svg)](https://opencollective.com/bw)
-[![Twitter Follow](https://img.shields.io/twitter/follow/bw_official.svg?style=social&label=bw)](https://twitter.com/bw_official)
-
+[![Twitter Follow](https://img.shields.io/twitter/follow/bw_official.svg?style=social&label=bw)](https://twitter.com/CesarAU90812821_official)
+https://github.com/P7-33/WWW.BROWSER-BLOCKCHAIN.EXCHANGE.io
 A JavaScript / Python / PHP library for cryptocurrency trading and e-commerce with support for many bitcoin/ether/altcoin exchange markets and merchant APIs.
 
 ### [Install](#install) · [Usage](#usage) · [Manual](https://github.com/bw/bw/wiki) · [FAQ](https://github.com/bw/bw/wiki/FAQ) · [Examples](https://github.com/bw/bw/tree/master/examples) · [Contributing](https://github.com/bw/bw/blob/master/CONTRIBUTING.md) · [Social](#social)
