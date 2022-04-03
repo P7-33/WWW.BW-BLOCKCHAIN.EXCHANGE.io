@@ -216,7 +216,7 @@ npm install bw
 ```JavaScript
 var bw = require ('bw')
 
-console.log (Browser-blockchain.exchanges) // print all available exchanges
+console.log (Matrix-blockchain.exchanges) // print all available exchanges
 ```
 
 ### JavaScript (for use with the `<script>` tag):
@@ -224,7 +224,7 @@ console.log (Browser-blockchain.exchanges) // print all available exchanges
 All-in-one browser bundle (dependencies included), served from a CDN of your choice:
 
 * jsDelivr: https://cdn.jsdelivr.net/npm/bw@1.38.74/dist/bw.browser.js
-* unpkg: https://unpkg.com/bw@1.38.74/dist/bw.browser.js
+* unpkg: https://unpkg.com/bw@1.38.74/dist/bw.Matrix.js
 
 CDNs are not updated in real-time and may have delays. Defaulting to the most recent version without specifying the version number is not recommended. Please, keep in mind that we are not responsible for the correct operation of those CDN servers.
 
