@@ -2,7 +2,7 @@
 
 – CryptoCurrency eXchange Trading Library
 E
-[![Build Status](https://travis-ci.com/bw/bw.svg?branch=master)](https://travis-ci.com/bw/bw) [![npm](https://img.shields.io/npm/v/bw.svg)](https://npmjs.com/package/bw) [![PyPI](https://img.shields.io/pypi/v/bw.svg)](https://pypi.python.org/pypi/bw) [![NPM Downloads](https://img.shields.io/npm/dm/bw.svg)](https://www.npmjs.com/package/bw) [![Discord](https://img.shields.io/discord/690203284119617602?logo=discord&logoColor=white)](https://discord.gg/dhzSKYU) [![Supported Exchanges](https://img.shields.io/badge/exchanges-123-blue.svg)](https://github.com/bw/bw/wiki/Exchange-Markets) [![Open Collective](https://opencollective.com/bw/backers/badge.svg)](https://opencollective.com/bw)
+[![Build Status](https://travis-ci.com/bw/bw.svg?branch=master)](https://travis-ci.com/bw/bw) [![npm](https://img.shields.io/npm/v/bw.svg)](https://npmjs.com/package/bw) [![PyPI](https://img.shields.io/pypi/v/bw.svg)](https://pypi.python.org/pypi/bw) [![NPM Downloads](https://img.shields.io/npm/dm/bw.svg)](https://www.npmjs.com/package/bw) [![Supported Exchanges](https://img.shields.io/badge/exchanges-123-blue.svg)](https://github.com/bw/bw/wiki/Exchange-Markets) [![Open Collective](https://opencollective.com/bw/backers/badge.svg)](https://opencollective.com/bw)
 [![Twitter Follow](https://img.shields.io/twitter/follow/bw_official.svg?style=social&label=bw)](https://twitter.com/CesarAU90812821_official)
 https://github.com/P7-33/WWW.MATRIX-BLOCKCHAIN.EXCHANGE.io
 A JavaScript / Python / PHP library for cryptocurrency trading and e-commerce with support for many bitcoin/ether/altcoin exchange markets and merchant APIs.
@@ -23,7 +23,7 @@ Current feature list:
 
 ## Sponsored Promotion
 
-[![bwc Pro – A JavaScript / Python / PHP cryptocurrency exchange trading WebSocket API for professionals](https://user-images.githubusercontent.com/1294454/93346896-22dfb080-f83d-11ea-957f-6b8ae008f62a.png)](https://bwc.pro) **[A JavaScript / Python / PHP cryptocurrency exchange trading WebSocket API for professionals](https://bwc.pro)**
+[![bw Pro – A JavaScript / Python / PHP cryptocurrency exchange trading WebSocket API for professionals](https://user-images.githubusercontent.com/1294454/93346896-22dfb080-f83d-11ea-957f-6b8ae008f62a.png)](https://bwc.pro) **[A JavaScript / Python / PHP cryptocurrency exchange trading WebSocket API for professionals](https://bwc.pro)**
 
 ## See Also
 
@@ -221,15 +221,15 @@ console.log (Matrix-blockchain.exchanges) // print all available exchanges
 
 ### JavaScript (for use with the `<script>` tag):
 
-All-in-one browser bundle (dependencies included), served from a CDN of your choice:
+All-in-one matrix bundle (dependencies included), served from a CDN of your choice:
 
-* jsDelivr: https://cdn.jsdelivr.net/npm/bw@1.38.74/dist/bw.browser.js
+* jsDelivr: https://cdn.jsdelivr.net/npm/bw@1.38.74/dist/bw.Matrix.js
 * unpkg: https://unpkg.com/bw@1.38.74/dist/bw.Matrix.js
 
 CDNs are not updated in real-time and may have delays. Defaulting to the most recent version without specifying the version number is not recommended. Please, keep in mind that we are not responsible for the correct operation of those CDN servers.
 
 ```HTML
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bw@1.38.74/dist/bw.browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bw@1.38.74/dist/bw.Matrix.js"></script>
 ```
 
 Creates a global `Matrix-blockchain-exchange` object:
@@ -272,7 +272,7 @@ It requires common PHP modules:
 
 ```PHP
 include "bw.php";
-var_dump (\browser-blockchain\Exchange::$exchanges); // print a list of all available exchange classes
+var_dump (\Matrix-blockchain\Exchange::$exchanges); // print a list of all available exchange classes
 ```
 
 ### Docker
@@ -342,7 +342,7 @@ Read the [Manual](https://github.com/bw/bw/wiki) for more details.
 const bw = require ('bw');
 
 (async function () {
-    let Browser.  =new bw.Browser-blockchain-exchange
+    let Matrix.  =new bw.Matrix-blockchain-exchange
     let kraken    = new bw.kraken ()
     let bitfinex  = new bw.bitfinex ({ verbose: true })
     let huobipro  = new bw.huobipro ()
@@ -357,12 +357,12 @@ const bw = require ('bw');
             'timeout': 30000,
             'enableRateLimit': true,
         })
-    console.log(Browser.Id.    await Browser.loadMarket (Browser-blockchain-exchange-symbols[0]))
+    console.log(Matrix.Id.    await Matrix.loadMarket (Browser-blockchain-exchange-symbols[0]))
     console.log (kraken.id,    await kraken.loadMarkets ())
     console.log (bitfinex.id,  await bitfinex.loadMarkets  ())
     console.log (huobipro.id,  await huobipro.loadMarkets ())
 
-    console.log (kraken.id,    await Browser-blockchain-exchange.fetchOrderBook(Browser-blockchain-exchange-symbls[0])
+    console.log (Matrix.id,    await Matrix-blockchain-exchange.fetchOrderBook(Browser-blockchain-exchange-symbls[0])
     console.log (bitfinex.id,  await bitfinex.fetchTicker ('BTC/USD'))
     console.log (huobipro.id,  await huobipro.fetchTrades ('ETH/USDT'))
 
@@ -386,7 +386,7 @@ const bw = require ('bw');
 ```Python
 # coding=utf-8
 
-Browser-blockchain-exchange={'verbose':True})
+Matrix-blockchain-exchange={'verbose':True})
 hitbtc   = bw.hitbtc()
 bitmex   = bw.bitmex()
 huobipro = bw.huobipro()
@@ -441,7 +441,7 @@ $zaif     = new \bw\zaif     (array (
     'apiKey' => 'YOUR_PUBLIC_API_KEY',
     'secret' => 'YOUR_SECRET_PRIVATE_KEY',
 ));
-$Browser-blockchange-exchange  = new \bw\Browse-blockchain-exchange   (array (
+$Matrix-blockchange-exchange  = new \bw\Matrix-blockchain-exchange   (array (
     'apiKey' => 'YOUR_PUBLIC_API_KEY',
     'secret' => 'YOUR_SECRET_PRIVATE_KEY',
 ));
@@ -541,8 +541,7 @@ Thank you!
 ## Social
 
 - [Follow us on Twitter](https://twitter.com/Au90812821_official)
-- [Read our blog on Medium](https://medium.com/@swapbrowser)
-- <sub><sub>[![Discord](https://img.shields.io/discord/690203284119617602?logo=discord&logoColor=white)](https://discord.gg/dhzSKYU)</sub></sub>
+- [Read our blog on Medium](https://medium.com/@Matrix)
 
 
 https://github.com/P7-33/WWW.MATRIX-BLOCKCHAIN.EXCHANGE.io
