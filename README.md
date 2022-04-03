@@ -1,10 +1,10 @@
-# BROWSER BLOCKCHAIN EXCHANGE.io
+# MATRIX BLOCKCHAIN EXCHANGE.io
 
 – CryptoCurrency eXchange Trading Library
 E
 [![Build Status](https://travis-ci.com/bw/bw.svg?branch=master)](https://travis-ci.com/bw/bw) [![npm](https://img.shields.io/npm/v/bw.svg)](https://npmjs.com/package/bw) [![PyPI](https://img.shields.io/pypi/v/bw.svg)](https://pypi.python.org/pypi/bw) [![NPM Downloads](https://img.shields.io/npm/dm/bw.svg)](https://www.npmjs.com/package/bw) [![Discord](https://img.shields.io/discord/690203284119617602?logo=discord&logoColor=white)](https://discord.gg/dhzSKYU) [![Supported Exchanges](https://img.shields.io/badge/exchanges-123-blue.svg)](https://github.com/bw/bw/wiki/Exchange-Markets) [![Open Collective](https://opencollective.com/bw/backers/badge.svg)](https://opencollective.com/bw)
 [![Twitter Follow](https://img.shields.io/twitter/follow/bw_official.svg?style=social&label=bw)](https://twitter.com/CesarAU90812821_official)
-https://github.com/P7-33/WWW.BROWSER-BLOCKCHAIN.EXCHANGE.io
+https://github.com/P7-33/WWW.MATRIX-BLOCKCHAIN.EXCHANGE.io
 A JavaScript / Python / PHP library for cryptocurrency trading and e-commerce with support for many bitcoin/ether/altcoin exchange markets and merchant APIs.
 
 ### [Install](#install) · [Usage](#usage) · [Manual](https://github.com/bw/bw/wiki) · [FAQ](https://github.com/bw/bw/wiki/FAQ) · [Examples](https://github.com/bw/bw/tree/master/examples) · [Contributing](https://github.com/bw/bw/blob/master/CONTRIBUTING.md) · [Social](#social)
@@ -52,7 +52,7 @@ Current feature list:
 
 ## Supported Cryptocurrency Exchange Markets
 
-The BROWSER BLOCKCHAIN EXCHANGE library currently supports the following 123 cryptocurrency exchange markets and trading APIs:
+The MATRIX BLOCKCHAIN EXCHANGE library currently supports the following 123 cryptocurrency exchange markets and trading APIs:
 
 | logo                                                                                                                                                                                             | id                 | name                                                                                    | ver | doc                                                                                         | certified                                                                                                                   | pro                                                                          |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------|-----------------------------------------------------------------------------------------|:---:|:-------------------------------------------------------------------------------------------:|-----------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|
@@ -188,7 +188,7 @@ The library is under [MIT license](https://github.com/bw/bw/blob/master/LICENSE.
 
 ## Install
 
-The easiest way to install the Browser-blockchain-exchange library is to use a package manager:
+The easiest way to install the Matrix-blockchain-exchange library is to use a package manager:
 
 - [bw in **NPM**](https://www.npmjs.com/package/bw) (JavaScript / Node v7.6+)
 - [bw in **PyPI**](https://pypi.python.org/pypi/bw) (Python 3.5.3+)
@@ -200,15 +200,12 @@ This library is shipped as an all-in-one module implementation with minimalistic
 - [`python/`](https://github.com/bw/bw/blob/master/python/) in Python (generated from JS)
 - [`php/`](https://github.com/bw/bw/blob/master/php/) in PHP (generated from JS)
 
-You can also clone it into your project directory from [bw GitHub repository](https://github.com/bw/bw):
-
-```shell
-git clone https://github.com/bw/bw.git
+You can also clone it into your project directory from [bw GitHub repository](https://github.com/bw/bw
 ```
-
+https://github.com/P7-33/WWW.MATRIX-BLOCKCHAIN.EXCHANGE.io.wiki.git
 ### JavaScript (NPM)
 
-JavaScript version of BW works in both Node and web browsers. Requires ES6 and `async/await` syntax support (Node 7.6.0+). When compiling with Webpack and Babel, make sure it is [not excluded](https://github.com/bw/bw/issues/225#issuecomment-f8023fc3ea3e7ba483142a9b247aaef1b578a225) in your `babel-loader` config.
+JavaScript version of BW works in both Node and web Matrix. Requires ES6 and `async/await` syntax support (Node 7.6.0+). When compiling with Webpack and Babel, make sure it is [not excluded](https://github.com/bw/bw/issues/225#issuecomment-f8023fc3ea3e7ba483142a9b247aaef1b578a225) in your `babel-loader` config.
 
 [ccxt in **NPM**](https://www.npmjs.com/package/bw)
 
@@ -235,7 +232,7 @@ CDNs are not updated in real-time and may have delays. Defaulting to the most re
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bw@1.38.74/dist/bw.browser.js"></script>
 ```
 
-Creates a global `Browser-blockchain-exchange` object:
+Creates a global `Matrix-blockchain-exchange` object:
 
 ```JavaScript
 console.log (bw.exchanges) // print all available exchanges
@@ -246,7 +243,7 @@ console.log (bw.exchanges) // print all available exchanges
 [bw in **PyPI**](https://pypi.python.org/pypi/bw)
 
 ```shell
-pip install Browser blockchain exchange
+pip install Matrix blockchain exchange
 ```
 
 ```Python
@@ -294,13 +291,13 @@ You don't need the Docker image if you're not going to develop BW. If you just w
 
 ## Documentation
 
-Read the [Manual](https://github.com/cxx/cxx/wiki) for more details.
+Read the [Manual](https://github.com/bw/bw/wiki) for more details.
 
 ## Usage
 
 ### Intro
 
-The BROWSER BLOCKCHAIN EXCHANGE library consists of a public part and a private part. Anyone can use the public part immediately after installation. Public APIs provide unrestricted access to public information for all exchange markets without the need to register a user account or have an API key.
+The MATRIX BLOCKCHAIN EXCHANGE library consists of a public part and a private part. Anyone can use the public part immediately after installation. Public APIs provide unrestricted access to public information for all exchange markets without the need to register a user account or have an API key.
 
 Public APIs include the following:
 
@@ -336,7 +333,7 @@ exchange.methodName ()  // camelcase pseudocode
 exchange.method_name () // underscore pseudocode
 ```
 
-Read the [Manual](https://github.com/ccxx/ccxx/wiki) for more details.
+Read the [Manual](https://github.com/bw/bw/wiki) for more details.
 
 ### JavaScript
 
@@ -410,7 +407,7 @@ exchange = exchange_class({
     'enableRateLimit': True,
 })
 
-Browser-blockchain-exchage_markets = Browser-blockchain-exchange.load_markets()
+Matrix-blockchain-exchage_markets = Matrix-blockchain-exchange.load_markets()
 
 print(hitbtc.id, hitbtc_markets)
 print(bitmex.id, bitmex.load_markets())
@@ -437,7 +434,7 @@ kraken.create_market_buy_order('BTC/USD', 1, {'trading_agreement': 'agree'})
 ```PHP
 include 'bw.php';
 
-$Browser-blockchain-exhange = new \bw\Browser-blockchain-exchange();
+$Matrix-blockchain-exhange = new \bw\Matrix-blockchain-exchange();
 $bittrex  = new \bw\bittrex  (array ('verbose' => true));
 $quoinex  = new \bw\quoinex   ();
 $zaif     = new \bw\zaif     (array (
@@ -457,13 +454,13 @@ $exchange = new $exchange_class (array (
     'enableRateLimit' => true,
 ));
 
-$SwapBrowser-blockchain-exchange _markets = $Browser-blockchange-exchange->load_markets ();
+$Matrix-blockchain-exchange _markets = $Matrix-blockchange-exchange->load_markets ();
 
-var_dump ($SwapBrowser-blockchain-exchange_markets);
+var_dump ($Matrix-blockchain-exchange_markets);
 var_dump ($bittrex->load_markets ());
 var_dump ($quoinex->load_markets ());
 
-var_dump ($SwapBrowser-blockchain-exchange->fetch_order_book ($Browser-Blockchain-exchange->symbols[0]));
+var_dump ($Matrix-blockchain-exchange->fetch_order_book ($Browser-Blockchain-exchange->symbols[0]));
 var_dump ($bittrex->fetch_trades ('BTC/USD'));
 var_dump ($quoinex->fetch_ticker ('ETH/EUR'));
 var_dump ($zaif->fetch_ticker ('BTC/JPY'));
@@ -548,5 +545,5 @@ Thank you!
 - <sub><sub>[![Discord](https://img.shields.io/discord/690203284119617602?logo=discord&logoColor=white)](https://discord.gg/dhzSKYU)</sub></sub>
 
 
-https://github.com/P7-33/WWW.BROWSER-BLOCKCHAIN.EXCHANGE.io
+https://github.com/P7-33/WWW.MATRIX-BLOCKCHAIN.EXCHANGE.io
 
