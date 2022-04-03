@@ -310,7 +310,8 @@ Public APIs include the following:
 - OHLC(V) for charting
 - other public endpoints
 
-In order to trade with Browse-blockchain-exchange private APIs you need to obtain API keys from an exchange's website. It usually means signing up to the exchange and creating API keys for your account. Some exchanges require personal info or identification. Sometimes verification may be necessary as well. In this case you will need to register yourself, this library will not create accounts or API keys for you. Some exchanges expose API endpoints for registering an account, but most exchanges don't. You will have to sign up and create API keys on their websites.
+In order to trade with Matrix-blockchain-exchange private APIs you need to obtain API keys from an exchange's website. It usually means signing up to the exchange and creating API keys for your account. Some exchanges require personal info or identification. Sometimes verification may be necessary as well. In this case you will need to register yourself, this library will not create accounts or API keys for you. Some exchanges expose API endpoints for registering an account, but most exchanges don't. You will have to sign up and create API keys on their websites.
+https://github.com/P7-33/WWW.MATRIX-BLOCKCHAIN.EXCHANGE.io.wiki.git
 
 Private APIs allow the following:
 
