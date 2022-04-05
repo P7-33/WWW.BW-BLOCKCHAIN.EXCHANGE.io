@@ -1,10 +1,8 @@
 # MATRIX BLOCKCHAIN EXCHANGE.io
 
 – CryptoCurrency eXchange Trading Library
-E
 [![Build Status](https://travis-ci.com/bw/bw.svg?branch=master)](https://travis-ci.com/bw/bw) [![npm](https://img.shields.io/npm/v/bw.svg)](https://npmjs.com/package/bw) [![PyPI](https://img.shields.io/pypi/v/bw.svg)](https://pypi.python.org/pypi/bw) [![NPM Downloads](https://img.shields.io/npm/dm/bw.svg)](https://www.npmjs.com/package/bw) [![Supported Exchanges](https://img.shields.io/badge/exchanges-123-blue.svg)](https://github.com/bw/bw/wiki/Exchange-Markets) [![Open Collective](https://opencollective.com/bw/backers/badge.svg)](https://opencollective.com/bw)
-[![Twitter Follow](https://img.shields.io/twitter/follow/bw_official.svg?style=social&label=bw)](https://twitter.com/CesarAU90812821_official)
-https://github.com/P7-33/WWW.MATRIX-BLOCKCHAIN.EXCHANGE.io
+[![Twitter Follow](https://img.shields.io/twitter/follow/bw_official.svg?style=social&label=bw)
 A JavaScript / Python / PHP library for cryptocurrency trading and e-commerce with support for many bitcoin/ether/altcoin exchange markets and merchant APIs.
 
 ### [Install](#install) · [Usage](#usage) · [Manual](https://github.com/bw/bw/wiki) · [FAQ](https://github.com/bw/bw/wiki/FAQ) · [Examples](https://github.com/bw/bw/tree/master/examples) · [Contributing](https://github.com/bw/bw/blob/master/CONTRIBUTING.md) · [Social](#social)
@@ -529,10 +527,10 @@ Thank you to all our backers! [[Become a backer](https://opencollective.com/bw#b
 ### Crypto
 
 ```
-ETH 0xc7d0b7C45b5eDe5704D46C69Dff7813A55671b5a (ETH only)
-BTC bc1qtxdpunal5syt0kfqcf0adsxcqep6an0sh47224
-BNB bnb1rdcr3v4clk56qhsmtwnc7wns45z7gg9ytv2tcq
-TRX TB6WdjhNbCdKp8zs7biwwEZeQVnxELn9Vh
+ETH  (ETH only)
+BTC 
+BNB 
+TRX 
 
 
 ```
@@ -541,9 +539,8 @@ Thank you!
 
 ## Social
 
-- [Follow us on Twitter](https://twitter.com/Au90812821_official)
-- [Read our blog on Medium](https://medium.com/@Matrix)
+- [Follow 
 
 
-https://github.com/P7-33/WWW.MATRIX-BLOCKCHAIN.EXCHANGE.io
+
 
