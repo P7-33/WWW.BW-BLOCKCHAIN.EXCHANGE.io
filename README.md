@@ -1,4 +1,4 @@
-# MATRIX BLOCKCHAIN EXCHANGE.io
+# BW BLOCKCHAIN EXCHANGE.io
 
 – CryptoCurrency eXchange Trading Library
 [![Build Status](https://travis-ci.com/bw/bw.svg?branch=master)](https://travis-ci.com/bw/bw) [![npm](https://img.shields.io/npm/v/bw.svg)](https://npmjs.com/package/bw) [![PyPI](https://img.shields.io/pypi/v/bw.svg)](https://pypi.python.org/pypi/bw) [![NPM Downloads](https://img.shields.io/npm/dm/bw.svg)](https://www.npmjs.com/package/bw) [![Supported Exchanges](https://img.shields.io/badge/exchanges-123-blue.svg)](https://github.com/bw/bw/wiki/Exchange-Markets) [![Open Collective](https://opencollective.com/bw/backers/badge.svg)](https://opencollective.com/bw)
