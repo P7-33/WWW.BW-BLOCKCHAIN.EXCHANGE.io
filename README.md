@@ -527,7 +527,8 @@ Thank you to all our backers! [[Become a backer](https://opencollective.com/bw#b
 ### Crypto
 
 ```
-ETH  (ETH only)
+BW  
+ETH 
 BTC 
 BNB 
 TRX 
@@ -541,6 +542,6 @@ Thank you!
 
 - [Follow 
 
-
+https://github.com/P7-33/WWW.BW-BLOCKCHAIN.EXCHANGE.io.wiki.git
 
 
